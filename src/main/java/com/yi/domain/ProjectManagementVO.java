@@ -8,9 +8,9 @@ public class ProjectManagementVO {
 	private int no;
 	private String name;
 	private String content;
-	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date start_date;
-	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date end_date;
 	private String progress;
 	

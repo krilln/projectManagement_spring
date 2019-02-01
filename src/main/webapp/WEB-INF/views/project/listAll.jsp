@@ -24,18 +24,33 @@
 	}
 	#addProjDiv{
 		margin:0 auto;
-		width: 40%; 
+		width: 70%; 
 		height:40px;
 		line-height:40px;
 		background-color: #BDBDBD;
-		
+		border-radius: 20px;
 	}
-	#addProjDiv:hover {
-		background-color: #A6A6A6;
-		color: yellow; 
-		font-weight: bold;
+	#plus{
+		width: 25px; 
 	}
 </style>
+<script>
+	$(function() {
+		$("#addProjDiv").mouseover(function() {
+			$("#addProjDiv").css("background-color","#A6A6A6");
+			$("#addProjDiv").css("font-weight","bold");
+			$("#addProj td a").css("color","yellow");
+		})
+		$("#addProjDiv").mouseout(function() {
+			$("#addProjDiv").css("background-color","#BDBDBD");
+			$("#addProjDiv").css("font-weight","normal");
+			$("#addProj td a").css("color","white");
+		})
+		$("#addProjDiv").click(function() {
+			location.href = "${pageContext.request.contextPath}/project/create";
+		})
+	})
+</script>
 </head>
 <body>
 	<%@ include file="../include/header.jsp" %>
@@ -45,7 +60,7 @@
 		<div class="col-sm-12">
 			<div class="box">
 				<div class="box-header with-border">
-					<h3 class="box-title">Board List All</h3>
+					<h3 class="box-title">Project List All</h3>
 				</div>
 				<div class="box-body">
 					<!-- table -->
@@ -67,7 +82,7 @@
 									<td>${plist.progress }</td>
 						    	</tr>	
 						    	</c:forEach>
-						    	<tr id="addProj"><td colspan="4"><div id="addProjDiv"><a href="${pageContext.request.contextPath}/project/create">[새 프로젝트 등록]</a></div></td></tr>
+						    	<tr id="addProj"><td colspan="4"><div id="addProjDiv"><img id="plus" src="${pageContext.request.contextPath }/resources/images/dd1f1bbdf28f2fac443372c7a7a91cf5.png"><a>   [새 프로젝트 등록]</a></div></td></tr>
 						    </tbody>
 					</table>
 				</div>

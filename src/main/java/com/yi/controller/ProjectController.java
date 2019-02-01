@@ -39,6 +39,7 @@ public class ProjectController {
 	@RequestMapping(value="create", method=RequestMethod.POST)
 	public String createPost(ProjectManagementVO vo, Model model) {
 		logger.info("create ----------- post");
+		logger.info(vo+"");
 		
 		service.insert(vo);
 		model.addAttribute("result", "success");
@@ -63,9 +64,10 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(value="modify", method=RequestMethod.GET)
-	public void modifyGet(ProjectManagementVO vo, Model model) {
+	public void modifyGet(int no, Model model) {
 		logger.info("modify ----------- get");
-		model.addAttribute("project", vo);
+		ProjectManagementVO von = service.selectByNo(no);
+		model.addAttribute("project", von);
 		
 	}
 	

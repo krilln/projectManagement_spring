@@ -455,7 +455,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Board Management
+            Project Management
             <small>Preview</small>
           </h1>
           <ol class="breadcrumb">
