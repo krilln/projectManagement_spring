@@ -55,7 +55,13 @@
 		})
 		
 		$("#btnRemove").click(function() {
-			$("#f1").attr("action", "remove");
+			var jbResult = confirm( '정말 삭제 하시겠습니까?' );
+		      /* document.write( jbResult ); */
+		      if(jbResult == false){
+		    	/*   history.back(); */
+		    	return;
+		      }
+			$("#f1").attr("action", "remove"); 
 			$("#f1").submit();
 		})
 		
