@@ -63,7 +63,7 @@
 		      }
 			$("#f1").attr("action", "remove"); 
 			$("#f1").submit();
-		})
+		})  
 		
 		$("#btnModify").click(function() {
 			$("#f1").attr("action", "modify");
