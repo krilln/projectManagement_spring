@@ -59,7 +59,7 @@
 		      /* document.write( jbResult ); */
 		      if(jbResult == false){
 		    	/*   history.back(); */
-		    	return;
+		    	return; 
 		      }
 			$("#f1").attr("action", "remove"); 
 			$("#f1").submit();
